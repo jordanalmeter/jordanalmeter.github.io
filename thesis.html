@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="myStyle.css">
+    <title>Jordan Almeter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        $(function(){
+        $("#navbar").load("/navbar.html");
+	});
+    </script>
+	<script src="./custom-elements.js"></script>
+	<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+	<script type="text/javascript"
+		src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+  </head>
+  
+  <body>
+    <nav id="navbar" class="nav">
+    </nav>
+    <h3>Thesis Summary</h3>
+	<p>This page uses MathJax to display equations. This page is also under construction.</p>
+	<h4> Background and Initial Motivation</h4>
+	<p>The <em>associahedron</em> is an $n$-dimensional polyhedron whose facial structure represents the solution to several equivalent combinatorial enumeration problems. The $n$-dimensional associahedron has $C_n$ vertices, where $C_n$ is the $n$th Catalan number. There are many ways to understand the associahedron, and many are listed <a href="https://sforcey.github.io/sf34/hedra.htm#Associahedron">here, in its listing on the Hedra Zoo</a>.
+	</p>
+
+	<p>One important generalization of the associahedron is called the <em>graph associahedron</em>. If we consider a connected graph $G$, then connected subsets of vertices of $G$ are called <em>tubes</em>. There is a set of compatibility conditions for tubes, and then we say that a set of compatible tubes is a <em>tubing</em>. The set of tubings for any graph $G$ on $n+1$ vertices forms a simplicial complex, which is actually dual to an $n$-dimensional simple polytope, which we call the <em>graph associahedron</em> of $G$. The assocaiehdron we know is the graph associahedron of a path graph. Other interesting graph associahedra include the graph associahedron of a path graph, called a <em>cyclohedron</em>, and the graph associahedron of a complete graph, which happens to be the <em>permutahedron</em>.
+	</p>
+	<p>Another important generalization of the associahedron is called the <em>generalized associahedron</em>. These were introduced by Fomin and Zelevinsky to describe finite type cluster algebras. Every irreducible crystallographic root system of type $\Phi$ defines a cluster algebra of type $\Phi$, and every cluster algebra of type $\Phi$ then defines an associahedron of type $\Phi$. There are many crystallographic root systems; the root system of type $A_n$ is associated with the symmetry group of a simplex, and the root systems of type $B_n$ and $C_n$ are associated with the symmetry group of a hypercube. The type $B_n$ associahedron is combinatorially isomorphic to the cyclohedron.</p>
+<!-- 	<p>
+	We should also consider an important generalization of Catalan numbers. <a href="https://en.wikipedia.org/wiki/Root_system">Crystallographic root systems</a> are fundamental for studying Lie algebras and symmetry groups. Irreducible root systems can be classified, and are closely associated with finite Coxeter groups. As a small example, $A_n$ corresponds to the symmetry group of an $n$-simplex, and types $B_n$ and $C_n$ correspond to the symmetry group of an $n$-hypercube. Every <em>crystallographic root system</em> can be used to define what is known as a <em>Cluster Algebra</em>. You can read more on the subject of cluster algebras and Catalan combinatorics <a href="https://arxiv.org/pdf/math/0505518">here</a>, in <em>Root Systems and Generalized Associahedra</em> by Sergey Fomin and Nathan Reading. We will not go into cluster algebras on this page, but the interesting point is that the number of clusters in a type $A_n$ cluster algebra is equal to the $n$th Catalan number, and the number of clusters in the type $B_n$ cluster algebra is equal to a number we might call the Catalan number of type $B$.
+	</p> -->
+	<!-- <p>There are many ways in which graph associahedra can be considered "type $A_n$". The graph associahedron of an empty graph is equal to the simplex, the graph associahedron of a path is equal to the associahedron, and the graph associahedron of a complete graph is the type $A_n$ permutahedron. Meanwhile, graph associahedra can realize the cyclohedron as the graph associahedron of a cycle graph, but we can't get a hypercube from graph associahedra, and we can't get a type $B_n$ permutahedron from graph associaehdra. Shouldn't there be some sort of "type $B$ context" which we could fit the cyclohedron into?</p> -->
+    <p>My thesis research was initially motivated by the search for a "type $B$" generalization of graph associahedra. The main takeaway is that graph associahedra can be realized by repeatedly truncating faces of a simplex, and the symmetry group of an $n$-dimensional simplex is $A_n$. Because the symmetry group of an $n$-dimensional hypercube is $B_n$, it makes sense to see what happens when faces of a hypercue are repeatedly truncated. As a result, this provides a very natural "type $B_n$" generalization of the graph associahedron, which we call the <em>hypercube graph associaehdron</em>.However, I found a strange result: for lower dimensions, I conjecture that the cyclohedron cannot be realized as a hypercube graph associahedron. Instead, I found a large number of different interesting polyhedra defined by different graphs on vertices $-n,\ldots,-1,1,\ldots,n$.</p>
+	<h4> The basics of Hypercube Graph Associahedra</h4>
+	<p>This section is under construction, see my thesis for more.</p>
+	<h4> Research Methodologies</h4>
+	<p>
+	The work in my thesis can be roughly divided into four categories:
+	<ol>
+		<li> Define a theoretical framework for understanding hypercube graph associahedra. This relied heavily on the definitions of graph associaehdra, nested complexes, and building sets defined by other authors. This work is primarily a translation of existing work into a specific level of generality.
+		<li> Find graphs with interesting hypercube-graph associahedra. Many were found by checking graphs with certain symmetries and basic properties (paths, cycles, complete graphs, etc.) but some were found by computer search. Even though I did not find any higher-dimensional hypercube graphs whose hypercube-graph associahedra were isomorphic to the cyclohedron, I found several which shared an f-vector with the hypercube graph associahedron.
+		<li> Write code in SageMath which can generate hypercube-graph associahedra, as well as calculate their f-vectors via brute-force. The images on this site were generated with this code.
+		<li> Develop enumeration techniques which recursively calculate the f-vectors of facets of hypercube-graph associahedra. These formulas, when applied to power series, tend to yield partial differential equations which are hard to solve but easy to verify. These methods also translate very easily to other graph associahedra.
+	</ol>
+    </p>
+    <br>
+    <app-footer></app-footer>
+  </body>
+</html>
+
