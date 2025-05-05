@@ -1,0 +1,59 @@
+
+body {
+  font-family: "Tahoma",sans-serif;
+  background-color:#cff;
+}
+
+h1{
+    text-align: center;
+    font-weight: bold;
+    color: #280;
+}
+
+h2{
+    color:#130;
+}
+
+.container {
+    margin-left: 10px; /* Example narrow left margin for mobile */
+    margin-right: 10px; /* Example narrow right margin for mobile */
+  }
+  
+  p {
+    margin-bottom: 15px; /* Some bottom margin between paragraphs */
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      margin-left: 50px; /* Example wider left margin for desktop */
+      margin-right: 50px; /* Example wider right margin for desktop */
+    }
+  
+    p {
+      margin-bottom: 20px; /* Slightly larger bottom margin on desktop */
+    }
+  }
+
+<!-- Navigation Bar -->
+
+.nav {background:#eee;}
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:#333333;
+}
+.nav li {
+  float: left;
+}
+.nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+.nav li a:hover {
+  background-color:#111111
+}
