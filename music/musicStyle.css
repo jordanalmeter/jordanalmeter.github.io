@@ -23,7 +23,7 @@ body{font-family:Arial;background-color: lemonchiffon;font-size:110%}
 
   /* img.example {max-width:50%;} */
 
-  @media (min-width: 768px) {
+  @media (min-width: 1200px) {
     .container {
       margin-left: 100px; /* Example wider left margin for desktop */
       margin-right: 20%; /* Example wider right margin for desktop */
