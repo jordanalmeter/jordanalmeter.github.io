@@ -1,0 +1,35 @@
+h1, h2, h3, h4, h5, h6 {font-family:Tahoma,sans-serif;}
+
+h1{color:darkred;}
+h2{color:darkblue;}
+
+body{font-family:Arial;background-color: lemonchiffon;font-size:110%}
+
+.toc-list{font-family:Georgia,serif}
+
+.container {
+    margin-left: 10px; /* Example narrow left margin for mobile */
+    margin-right: 10px; /* Example narrow right margin for mobile */
+  }
+  
+  p {
+    margin-bottom: 15px; /* Some bottom margin between paragraphs */
+  }
+  em{
+    font-weight:bold
+  }
+
+  img {max-width:100%;height:auto; margin: 0px 10px 5px 0px;border-style:outset; border-color:blue;}
+
+  /* img.example {max-width:50%;} */
+
+  @media (min-width: 768px) {
+    .container {
+      margin-left: 100px; /* Example wider left margin for desktop */
+      margin-right: 20%; /* Example wider right margin for desktop */
+    }
+  
+    p {
+      margin-bottom: 20px; /* Slightly larger bottom margin on desktop */
+    }
+  }

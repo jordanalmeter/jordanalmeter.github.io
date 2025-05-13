@@ -25,8 +25,8 @@ h2{
 
   @media (min-width: 768px) {
     .container {
-      margin-left: 50px; /* Example wider left margin for desktop */
-      margin-right: 50px; /* Example wider right margin for desktop */
+      margin-left: 100px; /* Example wider left margin for desktop */
+      margin-right: 100px; /* Example wider right margin for desktop */
     }
   
     p {
